@@ -14,7 +14,7 @@ export default class Header extends Component{
                     <Link className="nav-link" to={'/bar'}>Bar</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to={'/calc'} >Clac</Link>
+                    <Link className="nav-link" to={'/calc'} >Calc</Link>
                 </li>
 
             </ul>

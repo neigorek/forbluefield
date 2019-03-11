@@ -93,6 +93,11 @@ export default class App extends Component{
                             <h1>App</h1>
 
                             <Header/>
+                        <Route path='/'
+                               render={()=><h2>Welcome to my test project</h2>}
+                               exact
+
+                        />
 
                             <Route path='/table' component={wrapTab}/>
 

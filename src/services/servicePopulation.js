@@ -21,15 +21,24 @@ export default class ServicePopulation {
 
         console.log(arguments)
 
-        let data = await axios.get(`${this._baseURL}/life-expectancy/remaining/${sex}/${country}/${date}/${age}`)
-            .then((data)=>{
-                console.log(data.data.remaining_life_expectancy,'consol')
-                return data.data.remaining_life_expectancy
-            })
+        try {
 
+            let data = await axios.get(`${this._baseURL}/life-expectancy/remaining/${sex}/${country}/${date}/${age}`)
+                .then((data) => {
+                    console.log(data.data.remaining_life_expectancy, 'consol')
+                    return data.data.remaining_life_expectancy
+                })
+            return data
+        }
+        catch (e) {
 
-        return data
+            console.log(e.name)
+            throw e
+
+        }
 
     }
+
+
 
 }
